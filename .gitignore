@@ -1,0 +1,7 @@
+tmp/*
+tmp/classes/*
+logs/*
+test-result/*
+eclipse/*
+.classpath
+
