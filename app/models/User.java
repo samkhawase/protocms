@@ -13,6 +13,9 @@ public class User extends Model {
 	
 	@Required
 	public String userId;
+
+	@Required
+	public String password;
 	
 	@Email
 	@Required
@@ -21,22 +24,23 @@ public class User extends Model {
 	public boolean isStudent;
 	public boolean isEmployee;
 	public boolean isAdmin;
-	
-	@Required
-	public String saltedPass;
-	@Required
-	public String salt;
-	@Required
-	public String recoveryString;
-	
+
 	public Date createdOn;
 	public Date lastUpdate;
-
+	
+// salted passwords are coming in next version	
+//	@Required
+//	public String saltedPass;
+//	@Required
+//	public String salt;
+//	@Required
+//	public String recoveryString;
+	
 	public User(String userId, String password, String email){
 		this.userId = userId;
 		this.emailId = email;
-		
-		// create a salted password here
+		this.password = password;
 		
 	}
+
 }

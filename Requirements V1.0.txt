@@ -1,55 +1,53 @@
-Functions that would be made currently available in the  system:
-
-1.	Login to the system (login module) 
-
-2.	Enter the  student details/create student
-3.	Change the student details
-4.	Delete a student info
-5.	Find a student
-6.	Find all students in a batch
-7.	Enter teacher details/create teacher
-8.	Change the teacher details
-9.	Delete a teacher
-10.	Find a teacher
-11.	Enter batch/create batch
-12.	Delete a batch
-13.	Find a batch
-14.	Enter subject details
-15.	Change subject details
-16.	Find subject
-17.	delete subject
-18.	assign a subject to teacher
-19.	assign student to a batch/enroll function
-20.	assign a subject to batch
-21.	create teacher costraints
-22.	create time table
-23.	see time table for a particular batch
-24.	see time table for a particular teacher
-25.	see time table for a particular class room
-26.	see all the subjects+batch assigned to a teacher
-27.	adding transactions to system
-28.	authorizing a user for a particular transaction
-29.	create exam
-30.	assign exam to subject
-31.	see results
-32.	Change password
-33.	Change others password
-
 Entities:
 	Users ->
 		Student
 		Teacher
 		Non teaching staff
 		Admins
-			
+	Other system related ->		
 		Course : e.g. 3rd Sem. Maths
-		Batch or section or period: e.g. Engg. Maths by Prof. Deshpande at 10:00 AM 
-		Year or term: 3rd year Electronics
+		Batch or Section or Period: e.g. Engg. Maths by Prof. Deshpande at 10:00 AM 
+		Year or Term: 3rd year Electronics
 		Subject: Engg. maths
-		Timetable:
+		Timetable: 1st week of Sept.
 		
-		
-		
-		
-		
-		
+Functions that would be made currently available in the  system:
+
+Authentication and authorization:
+		Create/Retrieve/update/delete user
+		Change/reset password
+
+Student:
+	CRUD operations on student
+	Change the student details
+	Delete a student info
+	Find a student
+	Find all students in a batch
+
+Teacher:
+	CRUD operations on teacher
+
+Batch:
+	CRUD operations on batch
+
+Course:
+	CRUD operations on course
+Subject:
+	CRUD operations on subject	
+
+Timetable:	
+	CRUD operations on timetable
+	see time table for a particular batch
+	see time table for a particular teacher
+	see time table for a particular class room	
+
+Other:
+	assign a subject to teacher
+	assign student to a batch/enroll function
+	assign a subject to batch
+	create teacher costraints
+ 	all the subjects+batch assigned to a teacher
+	adding scheduled batch jobs, if any
+	create exam
+	assign exam to subject
+	see results

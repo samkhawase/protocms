@@ -11,7 +11,8 @@
 		"recoveryString" : "Akola",
 		"createdOn" : "08302011120000",
 		"lastUpdate" : "08302011120000"
-}
+	}
+}	
 
 
 {
@@ -45,7 +46,8 @@
 			"subjects" : ["maths", "physics", "chemistry", "English"],
 			"class" : "5th Semester" 
 			}
-}		
+	}
+}	
 
 {
 	"employee" : {
@@ -80,10 +82,76 @@
 			}
 	}
 }
+{
+	"subject" : {
+		"subjectName" : "Engg. Maths",
+		"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+}
 
 {
 	"course" : {
 		"courseName" : "3rd Semester",
-		"courseSubjects" : ["Maths II", "Physics II", "Chemistry II", "English II", "Social Science"]
+		"courseSubjects" : [ 	
+							"Engg. Maths" : {
+								"subjectName" : "Engg. Maths",
+								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								},
+							"Physics II" : {
+								"subjectName" : "Physics II",
+								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								},
+							"Chemistry II" : {
+								"subjectName" : "Chemistry II",
+								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								},
+							"English II" : {
+								"subjectName" : "English II",
+								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								}										
+							],
 		"courseHead" : "Anna Hazare"
+	}
 }
+
+{
+	"Lecture" : {
+		"batchName" : "Engg. Maths",
+		"subject" : "Engg. maths",
+		"schedule" : [
+			"Monday" : "11:00 AM",
+			"Wednesday" : :"11:00 AM", 
+			"Friday" : "10:00AM"
+			]
+		"course" : {
+			"courseName" : "3rd Semester",
+			"courseSubjects" : [ 	
+								"Engg. Maths" : {
+									"subjectName" : "Engg. Maths",
+									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+									},
+								"Physics II" : {
+									"subjectName" : "Physics II",
+									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+									},
+								"Chemistry II" : {
+									"subjectName" : "Chemistry II",
+									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+									},
+								"English II" : {
+									"subjectName" : "English II",
+									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+									}										
+								],
+			"courseHead" : "Anna Hazare"
+		}			
+
+	}
+}	
+
+/* 
+		Course : e.g. 3rd Sem. Maths
+		Batch or Section or Period: e.g. Engg. Maths by Prof. Deshpande at 10:00 AM 
+		Year or Term: 3rd year Electronics
+		Subject: Engg. maths
+		Timetable: 1st week of Sept.
+*/
