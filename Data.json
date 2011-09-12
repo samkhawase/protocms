@@ -1,152 +1,251 @@
 /* Schema document v0.1*/
 {
-	"user" : {
-		"userName" : "Sam.Khawse",
-		"email" : "sam@gmail.com",
-		"isStudent" : "true",
-		"isAdmim" : "false",
-		"isEmployee" : "false",
-		"saletedPass" : "0xsalted",
-		"salt" : "abcd",
-		"recoveryString" : "Akola",
-		"createdOn" : "08302011120000",
-		"lastUpdate" : "08302011120000"
-	}
-}	
-
-
-{
-	"student" : {
-		"loginDetails" : {
-			"userName" : "Sam.Khawse",
-			"email" : "sam@gmail.com",
-			"isStudent" : "true",
-			"isAdmim" : "false",
-			"isEmployee" : "false",
-			"saletedPass" : "0xsalted",
-			"salt" : "abcd",
-			"recoveryString" : "Akola",
-			"createdOn" : "08302011120000",
-			"lastUpdate" : "08302011120000"				
-			}
-		"personalDetails" : {
-			"name" : { "firstName" : "Sam", "middleName" : "Shridhar", "lastName" : "Khawse" },
-			"address" : { "line1" : "3600", "line2" : "Army Post Rd.", "city" : "Des Moines", "state" : "IA", "zip" : "50321" },
-			"phone" : "5152109636",
-			"dateOfBirth" : "12/24/1982",
-			"sex" : "male",
-			"bloodGroup" : "A+"
-			},
-		"enrolmentDetails" : {
-			"enrolmentNumber" : "12345",
-			"rollNo" : "31",
-			}
-		"courseDetails" : {
-			"major" : "Physics",
-			"subjects" : ["maths", "physics", "chemistry", "English"],
-			"class" : "5th Semester" 
-			}
+	'user' : {
+		'userName' : 'Sam.Khawse',
+		'email' : 'sam@gmail.com',
+		'isStudent' : 'true',
+		'isAdmim' : 'false',
+		'isEmployee' : 'false',
+		'saletedPass' : '0xsalted',
+		'salt' : 'abcd',
+		'recoveryString' : 'Akola',
+		'createdOn' : '08302011120000',
+		'lastUpdate' : '08302011120000'
 	}
 }	
 
 {
-	"employee" : {
-		"loginDetails" : {
-			"userName" : "Anna.Hazare",
-			"email" : "anna@gmail.com",
-			"isEmployee" : "true",
-			"saletedPass" : "0xsalted",
-			"salt" : "abcd",
-			"recoveryString" : "Ralegaon Siddhi",
-			"createdOn" : "08302011120000",
-			"lastUpdate" : "08302011120000"		
-			}
-		"personalDetails" : {
-			"name" : { "firstName" : "Anna", "middleName" : "Baburao", "lastName" : "Hazare" },
-			"address" : { "line1" : "Village Temple", "line2" : "Main Rd.", "city" : "Ralegaon Siddhi", "state" : "MS", "zip" : "421012" },
-			"phone" : "9998887766",
-			"dateOfBirth" : "01/01/1952",
-			"sex" : "male",
-			"bloodGroup" : "A+"
-			}
-		"employmentDetails" : {
-			"dateOfJoining" : "08302011",
-			"experience" : "12 Years",
-			"education" : "M.Sc. Maths",
-			"designation" : "Sr. lecturer"
-			}
-		"teachingDetails" : {
-			"classes" : ["3rd Sem", "4th Sem", "8th Sem"],
-			"courses" : ["Analytical Maths", "Astro Physics", "Integral Calculus"]
-			""
-			}
-	}
-}
-{
-	"subject" : {
-		"subjectName" : "Engg. Maths",
-		"teachers" : ["McPande", "Gadekar", "Deshmukh"]
-}
-
-{
-	"course" : {
-		"courseName" : "3rd Semester",
-		"courseSubjects" : [ 	
-							"Engg. Maths" : {
-								"subjectName" : "Engg. Maths",
-								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
-								},
-							"Physics II" : {
-								"subjectName" : "Physics II",
-								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
-								},
-							"Chemistry II" : {
-								"subjectName" : "Chemistry II",
-								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
-								},
-							"English II" : {
-								"subjectName" : "English II",
-								"teachers" : ["McPande", "Gadekar", "Deshmukh"]
-								}										
-							],
-		"courseHead" : "Anna Hazare"
-	}
-}
-
-{
-	"Lecture" : {
-		"batchName" : "Engg. Maths",
-		"subject" : "Engg. maths",
-		"schedule" : [
-			"Monday" : "11:00 AM",
-			"Wednesday" : :"11:00 AM", 
-			"Friday" : "10:00AM"
-			]
-		"course" : {
-			"courseName" : "3rd Semester",
-			"courseSubjects" : [ 	
-								"Engg. Maths" : {
-									"subjectName" : "Engg. Maths",
-									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+	'student' : {
+		'loginDetails' : {
+			'userName' : 'Sam.Khawse',
+			'email' : 'sam@gmail.com',
+			'isStudent' : 'true',
+			'isAdmim' : 'false',
+			'isEmployee' : 'false',
+			'saletedPass' : '0xsalted',
+			'salt' : 'abcd',
+			'recoveryString' : 'Akola',
+			'createdOn' : '08302011120000',
+			'lastUpdate' : '08302011120000'				
+		},
+		'personalDetails' : {
+			'name' : { 'firstName' : 'Sam', 'middleName' : 'Shridhar', 'lastName' : 'Khawse' },
+			'address' : { 'line1' : '3600', 'line2' : 'Army Post Rd.', 'city' : 'Des Moines', 'state' : 'IA', 'zip' : '50321' },
+			'phone' : '5152109636',
+			'dateOfBirth' : '12/24/1982',
+			'sex' : 'male',
+			'bloodGroup' : 'A+'
+		},
+		'enrolmentDetails' : {
+			'enrolmentNumber' : '12345',
+			'rollNo' : '31',
+		},
+		'courseDetails' : {
+			'courseName' : '3rd Semester',
+			'courseSubjects' : [ 	
+								'Engg. Maths' : {
+									'subjectName' : 'Engg. Maths',
+									'teacher' : 'McPande'
 									},
-								"Physics II" : {
-									"subjectName" : "Physics II",
-									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								'Physics II' : {
+									'subjectName' : 'Physics II',
+									'teacher' : 'Gadekar'
 									},
-								"Chemistry II" : {
-									"subjectName" : "Chemistry II",
-									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								'Chemistry II' : {
+									'subjectName' : 'Chemistry II',
+									'teacher' : 'Deshmukh'
 									},
-								"English II" : {
-									"subjectName" : "English II",
-									"teachers" : ["McPande", "Gadekar", "Deshmukh"]
+								'English II' : {
+									'subjectName' : 'English II',
+									'teacher' : 'McPande'
 									}										
 								],
-			"courseHead" : "Anna Hazare"
+			'courseHead' : 'Anna Hazare'
+		},
+		'scores' : [
+		subjectOne	{
+			'subjectName' : 'Engg. Maths',
+			'scores' : [25,27,26,25]
+			},
+		subjectTwo	{
+			'subjectName' : 'Physics II',
+			'scores' : [25,27,26,25]
+			}
+		subjectThree	{
+			'subjectName' : 'Chemistry II',
+			'scores' : [25,27,26,25]
+			}
+		subjectFour	{
+			'subjectName' : 'english II',
+			'scores' : [25,27,26,25]
+			}			
+		]	
+	}
+}
+
+{
+	'teacher' : {
+		'loginDetails' : {
+			'userName' : 'Anna.Hazare',
+			'email' : 'anna@gmail.com',
+			'isEmployee' : 'true',
+			'saletedPass' : '0xsalted',
+			'salt' : 'abcd',
+			'recoveryString' : 'Ralegaon Siddhi',
+			'createdOn' : '08302011120000',
+			'lastUpdate' : '08302011120000'		
+			},
+		'personalDetails' : {
+			'name' : { 'firstName' : 'Anna', 'middleName' : 'Baburao', 'lastName' : 'Hazare' },
+			'address' : { 'line1' : 'Village Temple', 'line2' : 'Main Rd.', 'city' : 'Ralegaon Siddhi', 'state' : 'MS', 'zip' : '421012' },
+			'phone' : '9998887766',
+			'dateOfBirth' : '01/01/1952',
+			'sex' : 'male',
+			'bloodGroup' : 'A+'
+			},
+		'employmentDetails' : {
+			'dateOfJoining' : '08302011',
+			'experience' : '12 Years',
+			'education' : 'M.Sc. Maths',
+			'designation' : 'Sr. lecturer'
+			},
+		'teachingDetails' : {
+			lecture1 : {
+				'subject' : 'Analytical Maths',
+				'class' : '3rd Year',
+				'schedule' : [
+						{'dayOfWeek' : 'Monday', 'timeOfDay' : '11:00'},
+						{'dayOfWeek' : 'Wednesday', 'timeOfDay' : '11:00'},
+						{'dayOfWeek' : 'Friday', 'timeOfDay' : '11:00'}
+					]
+			},
+			lecture2 : {
+				'subject' : 'Astro Physics',
+				'class' : '2rd Year',
+				'schedule' : [
+						{'dayOfWeek' : 'Tuesday', 'timeOfDay' : '1:00'},
+						{'dayOfWeek' : 'Thursday', 'timeOfDay' : '1:00'},
+						{'dayOfWeek' : 'Friday', 'timeOfDay' : '1:00'}
+					]
+				},
+			lecture3 : {
+				'subject' : 'Rocket Science',
+				'class' : '4th Year',
+				'schedule' : [
+						{'dayOfWeek' : 'Monday', 'timeOfDay' : '3:00'},
+						{'dayOfWeek' : 'Wednesday', 'timeOfDay' : '3:00'},
+						{'dayOfWeek' : 'Thursday', 'timeOfDay' : '3:00'}
+					]
+			}				
+		}
+	}
+}
+{
+	'subject' : {
+		'subjectName' : 'Engg. Maths',
+		'teachers' : ['McPande', 'Gadekar', 'Deshmukh']
+		}
+}
+
+{
+	'course' : {
+		'courseName' : '3rd Semester',
+		'courseSubjects' : [ 	
+							'Engg. Maths' : {
+								'subjectName' : 'Engg. Maths',
+								'teacher' : 'McPande'
+								},
+							'Physics II' : {
+								'subjectName' : 'Physics II',
+								'teacher' : 'Gadekar'
+								},
+							'Chemistry II' : {
+								'subjectName' : 'Chemistry II',
+								'teacher' : 'Deshmukh'
+								},
+							'English II' : {
+								'subjectName' : 'English II',
+								'teacher' : 'McPande'
+								}										
+							],
+		'courseHead' : 'Anna Hazare'
+	}
+}
+
+/* Timetable is a weekly schedule of lectures */
+{
+	'timetable' : {
+		'class' : '2nd year',
+		'Monday' : {
+			'lecture1' : {
+				'startTime' : '10:00 AM',
+				'endTime' : '11:00 AM',
+				'subject' : 'Maths',
+				'teacher' : 'Pande'
+			},
+			'lecture2' : {
+				'startTime' : '11:00 AM',
+				'endTime' : '12:00 PM',
+				'subject' : 'Physics',
+				'teacher' : 'Gadekar'
+			},
+			'lecture3' : {
+				'startTime' : '01:00 PM',
+				'endTime' : '02:00 PM',
+				'subject' : 'Maths II',
+				'teacher' : 'Pande'
+			},
+			'lecture4' : {
+				'startTime' : '02:00 PM',
+				'endTime' : '03:00 PM',
+				'subject' : 'Chemistry',
+				'teacher' : 'Deshmukh'
+			},
+			'lecture5' : {
+				'startTime' : '03:00 PM',
+				'endTime' : '04:00 PM',
+				'subject' : 'Physics II',
+				'teacher' : 'Gadekar'
+			}
+		}
+}
+
+/* Lecture was supposed to be an object on its own, but has beeen embedded in the teacher document 
+{
+	'Lecture' : {
+		'batchName' : 'Engg. Maths',
+		'subject' : 'Engg. maths',
+		'schedule' : [
+			'Monday' : '11:00 AM',
+			'Wednesday' : :'11:00 AM', 
+			'Friday' : '10:00AM'
+			]
+		'course' : {
+			'courseName' : '3rd Semester',
+			'courseSubjects' : [ 	
+								'Engg. Maths' : {
+									'subjectName' : 'Engg. Maths',
+									'teachers' : ['McPande', 'Gadekar', 'Deshmukh']
+									},
+								'Physics II' : {
+									'subjectName' : 'Physics II',
+									'teachers' : ['McPande', 'Gadekar', 'Deshmukh']
+									},
+								'Chemistry II' : {
+									'subjectName' : 'Chemistry II',
+									'teachers' : ['McPande', 'Gadekar', 'Deshmukh']
+									},
+								'English II' : {
+									'subjectName' : 'English II',
+									'teachers' : ['McPande', 'Gadekar', 'Deshmukh']
+									}										
+								],
+			'courseHead' : 'Anna Hazare'
 		}			
 
 	}
 }	
+*/
 
 /* 
 		Course : e.g. 3rd Sem. Maths
