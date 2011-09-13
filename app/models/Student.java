@@ -33,9 +33,9 @@ public class Student extends Model {
 	public int rollNumber; 			// can be String also
 
 	// Course details
-	public String major;
-	public String[] subjects;
-	public String currentClass;
+	public Course currentCourse;
+//	public String[] subjects;
+//	public String currentClass;
 	
 
 }
