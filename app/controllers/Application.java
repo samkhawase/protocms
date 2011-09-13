@@ -10,7 +10,8 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+    	Student student = Student.find().first();
+    	render();
     }
 
 }

@@ -1,6 +1,13 @@
 package models;
 
 import java.util.Date;
+import java.util.List;
+
+import org.bson.types.ObjectId;
+
+import com.google.code.morphia.annotations.Embedded;
+import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.annotations.Reference;
 
 import play.data.validation.Required;
 import play.modules.morphia.Model;
@@ -10,32 +17,29 @@ import play.modules.morphia.Model;
 
 public class Student extends Model {
 	
+	@Id
+	public ObjectId objectId;
+	
 	// User details, user details are fetched as Student.user.userId; 
 	@Required
-	public User user;
+	@Embedded
+	public User user;	
 	
 	// personalDetails
-	public String firstName;
-	public String middleName;
-	public String lastName;
-	public String addressLine1;
-	public String addressLine2;
-	public String city;
-	public String state;
-	public String zipCode;
-	public int phoneNumber;
-	public Date dateofBirth;
-	public String sex;
-	public String bloodGroup;
+	@Embedded
+	public PersonalDetails personalDetails;
 	
 	// enrolment details
-	public long enrolmentNumber;
-	public int rollNumber; 			// can be String also
+	@Embedded
+	public EnrolmentDetails enrolmentDetails;
 
-	// Course details
+	// scores of the student
+	@Embedded
+	public List<Scores> scores;
+	
+	// Course details - Reference, not embedded
+	@Reference
 	public Course currentCourse;
-//	public String[] subjects;
-//	public String currentClass;
 	
 
 }

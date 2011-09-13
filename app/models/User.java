@@ -2,14 +2,19 @@ package models;
 
 import java.util.Date;
 
+import org.bson.types.ObjectId;
+
+import com.google.code.morphia.annotations.Embedded;
 import com.google.code.morphia.annotations.Entity;
 
 import play.data.validation.Email;
 import play.data.validation.Required;
 import play.modules.morphia.Model;
 
-@Entity
+@Embedded
 public class User extends Model {
+	
+	public ObjectId objectId;
 	
 	@Required
 	public String userId;
