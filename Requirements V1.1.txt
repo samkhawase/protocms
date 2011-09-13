@@ -1,0 +1,98 @@
+Entities:
+	Student:
+	   loginDetails:
+	   
+	   personalDetails:
+	   
+	   enrollmentDetails:
+	   
+	   termDetails:
+	       termName:       2nd year
+	       classTeacher:   McPande
+	       listOfSubjects:
+	           subjectOne:     maths
+	           teacher:        McPande
+	           scores:         [29,35,35,35]
+
+               subjectTwo:     physics
+               teacher:        McPande
+               scores:         [29,35,35,35]	           
+	           
+               subjectThree:   chemistry
+               teacher:        McPande
+               scores:         [29,35,35,35]
+	           
+               subjectFour:    English
+               teacher:        McPande
+               scores:         [29,35,35,35]
+               
+               subjectOne:     Calculus
+               teacher:        McPande
+               scores:         [29,35,35,35]               	              
+	       
+	Teacher:
+	   loginDetails
+	   
+       personalDetails
+       
+       enrollmentDetails
+       
+       teachingDetails
+           termsTaught:         [1st year, 2nd year, 3rd year]
+           subjects:            Maths, Physics, Chemistry, English
+           
+           	   
+	   
+	   
+	Non teaching staff:
+	   loginDetails
+	Admins:
+	   loginDetails
+	   
+	Other system related ->		
+		Course : e.g. 3rd Sem. Maths
+		Batch or Section or Period: e.g. Engg. Maths by Prof. Deshpande at 10:00 AM 
+		Year or Term: 3rd year Electronics
+		Subject: Engg. maths
+		Timetable: 1st week of Sept.
+		
+Functions that would be made currently available in the  system:
+
+Authentication and authorization:
+		Create/Retrieve/update/delete user
+		Change/reset password
+
+Student:
+	CRUD operations on student
+	Change the student details
+	Delete a student info
+	Find a student
+	Find all students in a batch
+
+Teacher:
+	CRUD operations on teacher
+
+Batch:
+	CRUD operations on batch
+
+Course:
+	CRUD operations on course
+Subject:
+	CRUD operations on subject	
+
+Timetable:	
+	CRUD operations on timetable
+	see time table for a particular batch
+	see time table for a particular teacher
+	see time table for a particular class room	
+
+Other:
+	assign a subject to teacher
+	assign student to a batch/enroll function
+	assign a subject to batch
+	create teacher costraints
+ 	all the subjects+batch assigned to a teacher
+	adding scheduled batch jobs, if any
+	create exam
+	assign exam to subject
+	see results
