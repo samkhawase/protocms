@@ -17,16 +17,16 @@ public class Course extends Model {
 		this.courseHead = courseHead;
 		this.courseSubjects = courseSubjects;
 	}
-//	@Id
-//	public ObjectId id;
+	@Id
+	public ObjectId id;
 	
 	public String courseName;
 	public String courseHead;
 	public List<String> courseSubjects;
-//	String name;
-//	
-//	//overridden
-//	@Override public Object getId() {return name;}
-//    @Override protected void setId_(Object id) {name = id.toString();}
-//    protected static Object processId_(Object id) {return id.toString();}
+	String name;
+	
+	//overridden
+	@Override public Object getId() {return name;}
+    @Override protected void setId_(Object id) {name = id.toString();}
+    protected static Object processId_(Object id) {return id.toString();}
 }

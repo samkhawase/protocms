@@ -18,8 +18,8 @@ import play.modules.morphia.Model;
 @Entity
 public class Student extends Model {
 	
-//	@Id
-//	private Long objectId;
+	@Id
+	public ObjectId objectId;
 	
 	// User details, user details are fetched as Student.user.userId; 
 	@Required
@@ -41,6 +41,12 @@ public class Student extends Model {
 	// Course details - Reference, not embedded
 	@Reference
 	public Course currentCourse;
+	
+	//overridden
+	String name;	
+	@Override public Object getId() {return name;}
+    @Override protected void setId_(Object id) {name = id.toString();}
+    protected static Object processId_(Object id) {return id.toString();}	
 	
 
 }
