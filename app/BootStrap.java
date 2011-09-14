@@ -4,9 +4,9 @@ import play.*;
 import play.jobs.*;
 import play.test.*;
 import models.*;
-
 import org.apache.log4j.*;
 import org.apache.log4j.Logger;
+import org.bson.types.ObjectId;
 
 @OnApplicationStart
 public class BootStrap extends Job {
@@ -47,19 +47,20 @@ public class BootStrap extends Job {
 			subjects.add("Maths");
 			subjects.add("Physics");
 			subjects.add("Chemistry");
-
+			
+			// new course
 			Course course = new Course("3rd Year", "Pande", subjects);
 			course.save();
-
+			logger.info("Course Id is"+course.getId());
 			// now create a student
 			Student student = new Student();
-			student.currentCourse = course;
+			student.currentCourse = course.id;  // currentCourse is now _id
 			student.user = user;
 			student.personalDetails = personalDetails;
 			student.enrolmentDetails = ed;
 			student.scores = scoresList;
 
-			logger.info("Student created");
+			logger.info("Student created with Name: "+ student.personalDetails.firstName);
 			student.save();
 
 			// end check

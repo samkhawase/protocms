@@ -1,0 +1,6 @@
+{ "_id" : ObjectId("4e70f4a1b20b78c843618aa6"), 
+    "className" : "models.Course", 
+    "courseName" : "3rd Year", 
+    "courseHead" : "Pande", 
+    "courseSubjects" : [ "Maths", "Physics", "Chemistry" ] 
+}

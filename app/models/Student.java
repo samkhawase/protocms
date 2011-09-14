@@ -38,15 +38,16 @@ public class Student extends Model {
 	@Embedded
 	public List<Scores> scores;
 	
-	// Course details - Reference, not embedded
-	@Reference
-	public Course currentCourse;
+	// Course details - Reference, not embedded - Nope. just _id
+	public ObjectId currentCourse;
 	
-	//overridden
+//	public ObjectId [] previousCourses;
+	
+	//overridden methods, required for Play-Morphia
 	String name;	
-	@Override public Object getId() {return name;}
-    @Override protected void setId_(Object id) {name = id.toString();}
-    protected static Object processId_(Object id) {return id.toString();}	
+	@Override public Object getId() {return objectId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}
 	
 
 }

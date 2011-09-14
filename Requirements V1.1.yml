@@ -1,98 +1,80 @@
 Entities:
-	Student:
-	   loginDetails:
-	   
-	   personalDetails:
-	   
-	   enrollmentDetails:
-	   
-	   termDetails:
-	       termName:       2nd year
-	       classTeacher:   McPande
-	       listOfSubjects:
-	           subjectOne:     maths
-	           teacher:        McPande
-	           scores:         [29,35,35,35]
+# Student document
+    Student:
+        loginDetails:
+        personalDetails:
+        enrollmentDetails:
+        scoreCard: _linkToCurrentScoreCard
+        currentCourse: _linkToCourseDoc
+        previousCourses: 
+                - _linkToCourseDoc
+                - _linkToCourseDoc
 
-               subjectTwo:     physics
-               teacher:        McPande
-               scores:         [29,35,35,35]	           
-	           
-               subjectThree:   chemistry
-               teacher:        McPande
-               scores:         [29,35,35,35]
-	           
-               subjectFour:    English
-               teacher:        McPande
-               scores:         [29,35,35,35]
-               
-               subjectOne:     Calculus
-               teacher:        McPande
-               scores:         [29,35,35,35]               	              
-	       
-	Teacher:
-	   loginDetails
-	   
-       personalDetails
-       
-       enrollmentDetails
-       
-       teachingDetails
-           termsTaught:         [1st year, 2nd year, 3rd year]
-           subjects:            Maths, Physics, Chemistry, English
-           
-           	   
-	   
-	   
-	Non teaching staff:
-	   loginDetails
-	Admins:
-	   loginDetails
-	   
-	Other system related ->		
-		Course : e.g. 3rd Sem. Maths
-		Batch or Section or Period: e.g. Engg. Maths by Prof. Deshpande at 10:00 AM 
-		Year or Term: 3rd year Electronics
-		Subject: Engg. maths
-		Timetable: 1st week of Sept.
-		
-Functions that would be made currently available in the  system:
+#ScoreCard doc
+    ScoreCard:
+        stream: 'Computer Science'
+        className : '3rd year'
+        Subjects:
+            - Maths : '15'
+            - Physics: '14'
+            - Chemistry: '13'            
+            - Calculus: '13'
 
-Authentication and authorization:
-		Create/Retrieve/update/delete user
-		Change/reset password
+#Course doc
+    Course: 
+        stream: 'Computer Science'
+        className : '3rd year'
+        courseHead : 'Pande'
+        courseSubjects:
+            - subjectOne : 'Maths'
+            - subjectTwo: 'Physics'
+            - subjectThree: 'Chemistry'
+            - subjectFour: 'English'
+            - subjectFive: 'Calculus'
 
-Student:
-	CRUD operations on student
-	Change the student details
-	Delete a student info
-	Find a student
-	Find all students in a batch
+#Teacher doc
+    Teacher:
+        loginDetails:
+            personalDetails:
+            enrollmentDetails:
+            teachingDetails:
+                lectures:
+                    - _linkToLecture1
+                    - _linkToLecture2
+                    - _linkToLecture3
 
-Teacher:
-	CRUD operations on teacher
+#Lecture Doc    
+    Lecture:
+        subject: 'Maths'
+        class: '3rd Year'
+        division: 'Computers'
+        startTime: '3:00 PM'
+        endTime: '4:00 PM'
+        teacherName: "Pande"
+        teacherId: _linkToTeacherDoc    # teacher can be fetched by using the document _id 
+    
+#Timetable doc
+    TimeTable:
+        stream: 'Computer Science'
+        class: '3rd year' 
+        Monday :
+            lecture1: _linkToLectureDoc
+            lecture2: _linkToLectureDoc
+        Tuesday: 
+            lecture1: _linkToLectureDoc
+            lecture2: _linkToLectureDoc        
+        Wednesday: 
+            lecture1: _linkToLectureDoc
+            lecture2: _linkToLectureDoc        
+        Thursday: 
+            lecture1: _linkToLectureDoc
+            lecture2: _linkToLectureDoc        
+        Friday: 
+            lecture1: _linkToLectureDoc
+            lecture2: _linkToLectureDoc
 
-Batch:
-	CRUD operations on batch
-
-Course:
-	CRUD operations on course
-Subject:
-	CRUD operations on subject	
-
-Timetable:	
-	CRUD operations on timetable
-	see time table for a particular batch
-	see time table for a particular teacher
-	see time table for a particular class room	
-
-Other:
-	assign a subject to teacher
-	assign student to a batch/enroll function
-	assign a subject to batch
-	create teacher costraints
- 	all the subjects+batch assigned to a teacher
-	adding scheduled batch jobs, if any
-	create exam
-	assign exam to subject
-	see results
+# Other docs            
+    Non teaching staff:
+    # TBD
+    Admins:
+    # TBD

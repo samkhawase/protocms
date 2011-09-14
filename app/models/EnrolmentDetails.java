@@ -8,5 +8,5 @@ public class EnrolmentDetails {
 
 	public long enrolmentNumber;
 	public int rollNumber; 			// can be String also
-	
+	// we need the college/institution details here
 }
