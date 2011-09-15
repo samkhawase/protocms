@@ -4,6 +4,7 @@ import play.*;
 import play.jobs.*;
 import play.test.*;
 import models.*;
+
 import org.apache.log4j.*;
 import org.apache.log4j.Logger;
 import org.bson.types.ObjectId;
@@ -14,7 +15,13 @@ public class BootStrap extends Job {
 	private static Logger logger = LogManager.getLogger(BootStrap.class);
 
 	public void doJob() {
-
+		
+		logger.info("before loading the .yml file");
+		Fixtures.loadModels("initial-data.yml");
+		Student student = Student.find().first();
+		logger.info("Student created: "+ student.objectId);
+		
+/*		---- ols code to create student manually ----
 		// Check if the database is empty
 		if (Student.count() == 0) {
 
@@ -66,7 +73,8 @@ public class BootStrap extends Job {
 			// end check
 		}else{
 			logger.info("Students found: "+Student.count());
-		}
+		}	--- comments end ----- */
+		
 	}
 
 }
