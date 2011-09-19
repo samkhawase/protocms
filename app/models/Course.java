@@ -10,7 +10,7 @@ import play.modules.morphia.Model;
 public class Course extends Model {
 
 	public Course(String courseName, String courseHead,
-			List<String> courseSubjects) {
+			List<Subject> courseSubjects) {
 		super();
 		this.courseName = courseName;
 		this.courseHead = courseHead;
@@ -21,7 +21,7 @@ public class Course extends Model {
 	
 	public String courseName;
 	public String courseHead;
-	public List<String> courseSubjects;
+	public List<Subject> courseSubjects;
 
 	//overridden methods for Play-Morphia
 	

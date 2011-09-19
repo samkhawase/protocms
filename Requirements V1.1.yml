@@ -1,57 +1,82 @@
 Entities:
 # Student document
     Student:
-        loginDetails:
-        personalDetails:
-        enrollmentDetails:
-        scoreCard: _linkToCurrentScoreCard
-        currentCourse: _linkToCourseDoc
+        studentId:              _id
+        loginDetails:           _Embedded
+        personalDetails:        _Embedded
+        enrollmentDetails:      _Embedded
+        scoreCard:              _linkToCurrentScoreCard
+        currentCourse:          _linkToCourseDoc
         previousCourses: 
                 - _linkToCourseDoc
                 - _linkToCourseDoc
 
 #ScoreCard doc
     ScoreCard:
-        stream: 'Computer Science'
-        className : '3rd year'
+        scoreCardId:    _id
+        studentId:      _linkToStudentDoc
+        stream:         'Computer Science'
+        className :     '3rd year'
         Subjects:
-            - Maths : '15'
-            - Physics: '14'
-            - Chemistry: '13'            
-            - Calculus: '13'
+            - Maths :       '15'
+            - Physics:      '14'
+            - Chemistry:    '13'            
+            - Calculus:     '13'
+
+#Subject doc
+    Subject:
+        subjectId:      'M12345'
+        subjectName:    'Maths'
 
 #Course doc
     Course: 
-        stream: 'Computer Science'
-        className : '3rd year'
-        courseHead : 'Pande'
+        courseId:       _id
+        stream:         'Computer Science'
+        className :     '3rd year'
+        courseHead :    'Pande'
         courseSubjects:
-            - subjectOne : 'Maths'
-            - subjectTwo: 'Physics'
-            - subjectThree: 'Chemistry'
-            - subjectFour: 'English'
-            - subjectFive: 'Calculus'
+            - subjectOne : 
+                    subjectName: 'Maths'
+                    subjectId: 'M12345'
+            - subjectTwo: 
+                    subjectName: 'Physics'
+                    subjectId: 'P12345'            
+            - subjectThree: 
+                    subjectName: 'Chemistry'
+                    subjectId: 'C12345'            
+            - subjectFour: 
+                    subjectName: 'English'
+                    subjectId: 'E12345'           
+            - subjectFive: 
+                    subjectName: 'Calculus'
+                    subjectId: 'M12222'
 
 #Teacher doc
     Teacher:
-        loginDetails:
-            personalDetails:
-            enrollmentDetails:
-            teachingDetails:
-                lectures:
-                    - _linkToLecture1
-                    - _linkToLecture2
-                    - _linkToLecture3
+        teacherId:              _id
+        loginDetails:           _Embedded
+        personalDetails:        _Embedded
+        enrollmentDetails:      _Embedded
+        teachingDetails:        
+            lectures:
+                - _linkToLecture1
+                - _linkToLecture2
+                - _linkToLecture3
 
 #Lecture Doc    
     Lecture:
-        subject: 'Maths'
-        class: '3rd Year'
-        division: 'Computers'
-        startTime: '3:00 PM'
-        endTime: '4:00 PM'
-        teacherName: "Pande"
-        teacherId: _linkToTeacherDoc    # teacher can be fetched by using the document _id 
+        lectureId:          _id
+        subject:            'Maths'
+        class:              '3rd Year'
+        division:           'Computers'
+        startTime:          '3:00 PM'
+        endTime:            '4:00 PM'
+        teacherName:        'Pande'
+        teacherId:          _linkToTeacherDoc    # teacher can be fetched by using the document _id
+        rollNumbersPresent: 
+            [1,2,3,4,5,6]
+        rollNumbersAbsent:  
+            [7,8,9,10]
     
 #Timetable doc
     TimeTable:
@@ -72,7 +97,7 @@ Entities:
         Friday: 
             lecture1: _linkToLectureDoc
             lecture2: _linkToLectureDoc
-
+        
 # Other docs            
     Non teaching staff:
     # TBD
