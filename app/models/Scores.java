@@ -5,15 +5,15 @@ import com.google.code.morphia.annotations.Embedded;
 @Embedded
 public class Scores {
 
-	public Scores(String courseName, String teacherName, long[] scoresEarned) {
+	public Scores(String courseName, String teacherName, long scoresEarned) {
 		super();
 		this.courseName = courseName;
-		TeacherName = teacherName;
+		this.teacherName = teacherName;
 		this.scoresEarned = scoresEarned;
 	}
 	
 	public String courseName;
-	public String TeacherName;
-	public long [] scoresEarned; 
+	public String teacherName;
+	public long scoresEarned; 
 	
 }

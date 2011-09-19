@@ -1,26 +1,30 @@
 # Test data
-
-User(baloo):
-    userId:         baloo.bear
-    password:       secret
-    emailId:        baloo@gmail.com
-    isStudent:      true
-    isEmployee:     false
-    isAdmin:        false
-    createdOn:      2001-11-23 15:01:42 -5
-    lastUpdate:     2001-11-23 15:01:42 -5
+Course(thirdYear):
+    courseName:     3rd Year
+    courseHead:     Pande"
+    courseSubjects: ['Maths', 'Physics','Chemistry']
 
 Student(balooBear):
-    user:   baloo
+    user:
+        userId:         baloo.bear
+        password:       secret
+        emailId:        baloo@gmail.com
+        isStudent:      true
+        isEmployee:     false
+        isAdmin:        false
+        createdOn:      2001-11-23 15:01:42 -5
+        lastUpdate:     2001-11-23 15:01:42 -5
 
-#    Student.PersonalDetails(personalDetails):
-#        email:          sam@gmail.com
-#        password:       secret
-#        fullName:       Sam 
-#        isAdmin:        true
-#    
-#    Student.EnrolmentDetails(enrolmentDetails):
-#    
-#    Student.currentCourse:  ObjectId("4e70f4a1b20b78c843618aa6")
-    
+    personalDetails:
+        firstName:      Baloo   
+        middleName:     Big
+        lastName:       Bear 
+        addressLine1:   Punter lane 
+        addressLine2:   Hawai gully
+        city:           Cape Suzette        
+        state:          IA       
+        zipCode:        50265     
         
+    enrolmentDetails:
+        enrolmentNumber:  12345
+        rollNumber:       34
