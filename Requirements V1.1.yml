@@ -5,8 +5,8 @@ Entities:
         loginDetails:           _Embedded
         personalDetails:        _Embedded
         enrollmentDetails:      _Embedded
+        currentCourse:          _linkToCourseDoc        
         scoreCard:              _linkToCurrentScoreCard
-        currentCourse:          _linkToCourseDoc
         previousCourses: 
                 - _linkToCourseDoc
                 - _linkToCourseDoc
@@ -15,6 +15,7 @@ Entities:
     ScoreCard:
         scoreCardId:    _id
         studentId:      _linkToStudentDoc
+        courseId:       _linkToCourseDoc        
         stream:         'Computer Science'
         className :     '3rd year'
         Subjects:
@@ -63,42 +64,68 @@ Entities:
                 - _linkToLecture2
                 - _linkToLecture3
 
-#Lecture Doc    
-    Lecture:
-        lectureId:          _id
-        subject:            'Maths'
-        class:              '3rd Year'
-        division:           'Computers'
-        startTime:          '3:00 PM'
-        endTime:            '4:00 PM'
-        teacherName:        'Pande'
-        teacherId:          _linkToTeacherDoc    # teacher can be fetched by using the document _id
-        rollNumbersPresent: 
-            [1,2,3,4,5,6]
-        rollNumbersAbsent:  
-            [7,8,9,10]
-    
 #Timetable doc
     TimeTable:
         stream: 'Computer Science'
-        class: '3rd year' 
+        class: '3rd year'
         Monday :
-            lecture1: _linkToLectureDoc
-            lecture2: _linkToLectureDoc
+            lecture1: 
+              lectureId:    _linkToLectureDoc
+              startTime:    '10:00 AM'
+              endTime:      '11:00 AM'
+            lecture2:
+              lectureId:    _linkToLectureDoc
+              startTime:    '11:00 AM'
+              endTime:      '12:00 PM'
+            lecture3:
+              lectureId:    _linkToLectureDoc
+              startTime:    '01:00 PM'
+              endTime:      '02:00 PM'
+            lecture4:
+              lectureId:    _linkToLectureDoc
+              startTime:    '02:00 PM'
+              endTime:      '03:00 PM'            
+            lecture5:
+              lectureId:    _linkToLectureDoc
+              startTime:    '03:00 PM'
+              endTime:      '04:00 PM'                          
         Tuesday: 
-            lecture1: _linkToLectureDoc
-            lecture2: _linkToLectureDoc        
+            # ...
         Wednesday: 
-            lecture1: _linkToLectureDoc
-            lecture2: _linkToLectureDoc        
+            # ...
         Thursday: 
-            lecture1: _linkToLectureDoc
-            lecture2: _linkToLectureDoc        
+            # ...
         Friday: 
-            lecture1: _linkToLectureDoc
-            lecture2: _linkToLectureDoc
+            # ...
+
+#Lecture Doc    
+    Lecture:
+        lectureId:          _id
+        teacherId:          _linkToTeacherDoc   # teacher can be fetched by using the document _id
+        teacherName:        'Pande'             # redundant info       
+        subject:            'Maths'
+        class:              '3rd Year'
+        division:           'Computers'
+    # _Embedded Attendance Doc; List
+        Attendance:
+            -
+              attendanceID:       _id
+              lectureId:          _linkToLectureDoc
+              date:               '2001-11-23'
+              startTime:          '3:00 PM'
+              endTime:            '4:00 PM'
+              rollNumbersPresent: [1,2,3,4,5,6]
+              rollNumbersAbsent:  [7,8,9,10]                
+            -
+              attendanceID:       _id
+              lectureId:          _linkToLectureDoc
+              date:               '2001-11-23'
+              startTime:          '3:00 PM'
+              endTime:            '4:00 PM'
+              rollNumbersPresent: [1,2,3,4,5,6]
+              rollNumbersAbsent:  [7,8,9,10]                
         
-# Other docs            
+# Other docs;next version     
     Non teaching staff:
     # TBD
     Admins:
