@@ -1,5 +1,5 @@
 Entities:
-# Student document
+# Student document  - Completed
     Student:
         studentId:              _id
         loginDetails:           _Embedded
@@ -11,7 +11,7 @@ Entities:
                 - _linkToCourseDoc
                 - _linkToCourseDoc
 
-#ScoreCard doc
+#ScoreCard doc - Completed
     ScoreCard:
         scoreCardId:    _id
         studentId:      _linkToStudentDoc
@@ -24,12 +24,12 @@ Entities:
             - Chemistry:    '13'            
             - Calculus:     '13'
 
-#Subject doc
+#Subject doc - completed
     Subject:
         subjectId:      'M12345'
         subjectName:    'Maths'
 
-#Course doc
+#Course doc - completed
     Course: 
         courseId:       _id
         stream:         'Computer Science'
@@ -52,7 +52,7 @@ Entities:
                     subjectName: 'Calculus'
                     subjectId: 'M12222'
 
-#Teacher doc
+#Teacher doc - completed
     Teacher:
         teacherId:              _id
         loginDetails:           _Embedded

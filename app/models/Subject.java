@@ -2,12 +2,13 @@ package models;
 
 import org.bson.types.ObjectId;
 
+import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
 
 import play.data.validation.Required;
 import play.modules.morphia.Model;
 
-/*Subject class */
+@Entity
 public class Subject extends Model {
 	
 	@Id
@@ -18,6 +19,10 @@ public class Subject extends Model {
 	
 	// more fields, if reqd.
 	
-	
+/*	#Subject doc - completed
+    Subject:
+        subjectId:      'M12345'
+        subjectName:    'Maths'
+*/	
 
 }

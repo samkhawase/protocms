@@ -1,19 +1,37 @@
 package models;
 
-import com.google.code.morphia.annotations.Embedded;
+import java.util.HashMap;
 
-@Embedded
+import org.bson.types.ObjectId;
+
+import com.google.code.morphia.annotations.Embedded;
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
+
+@Entity
 public class Scores {
 
-	public Scores(String courseName, String teacherName, long scoresEarned) {
-		super();
-		this.courseName = courseName;
-		this.teacherName = teacherName;
-		this.scoresEarned = scoresEarned;
-	}
+	@Id
+	public ObjectId scoreCardId;
 	
-	public String courseName;
-	public String teacherName;
-	public long scoresEarned; 
+	public ObjectId studentId;
+	public ObjectId courseId;
 	
+	public String stream;
+	public String className;
+	public HashMap<Subject, Integer> scoresEarned; 	
+
+/*	#ScoreCard doc in Json
+    ScoreCard:
+        scoreCardId:    _id
+        studentId:      _linkToStudentDoc
+        courseId:       _linkToCourseDoc        
+        stream:         'Computer Science'
+        className :     '3rd year'
+        Subjects:
+            - Maths :       '15'
+            - Physics:      '14'
+            - Chemistry:    '13'            
+            - Calculus:     '13'
+*/	
 }

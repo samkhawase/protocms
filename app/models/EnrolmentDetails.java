@@ -6,7 +6,7 @@ import play.modules.morphia.Model;
 @Embedded
 public class EnrolmentDetails {
 
-	public long enrolmentNumber;
+	public String enrolmentNumber;
 	public int rollNumber; 			// can be String also
 	// we need the college/institution details here
 }
