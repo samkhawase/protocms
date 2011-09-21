@@ -4,11 +4,13 @@ import java.util.Date;
 
 import org.bson.types.ObjectId;
 
+import play.modules.morphia.Model;
+
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
 
 @Entity
-public class Attendance {
+public class Attendance extends Model{
 	
 	@Id
 	public ObjectId attendaceSheetId;
@@ -18,6 +20,11 @@ public class Attendance {
 	public String startTime;
 	public String endTime;
 	public String [] rollNumbersPresent, rollNumbersAbsent;
+	
+	//overridden methods, required for Play-Morphia
+	@Override public Object getId() {return attendaceSheetId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}
 
 	
 /*    Attendance:

@@ -1,9 +1,23 @@
 # Test data
+
+Subject(maths): 
+    subjectName: 'Maths'
+    subjectId: 'P12345'            
+Subject(chemistry): 
+    subjectName: 'Chemistry'
+    subjectId: 'C12345'            
+Subject(english): 
+    subjectName: 'English'
+    subjectId: 'E12345'           
+Subject(calculus): 
+    subjectName: 'Calculus'
+    subjectId: 'M12222'
+      
 Course(thirdYear):
     courseName:     3rd Year
     courseHead:     Pande"
-    courseSubjects: ['Maths', 'Physics','Chemistry']
-
+#    courseSubjects:
+           
 Student(balooBear):
     user:
         userId:         baloo.bear

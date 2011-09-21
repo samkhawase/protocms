@@ -4,12 +4,14 @@ import java.util.HashMap;
 
 import org.bson.types.ObjectId;
 
+import play.modules.morphia.Model;
+
 import com.google.code.morphia.annotations.Embedded;
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
 
 @Entity
-public class Scores {
+public class Scores extends Model {
 
 	@Id
 	public ObjectId scoreCardId;
@@ -19,7 +21,12 @@ public class Scores {
 	
 	public String stream;
 	public String className;
-	public HashMap<Subject, Integer> scoresEarned; 	
+	public HashMap<ObjectId, Integer> scoresEarned; // ObjectId of the Subject.class
+	
+	//overridden methods, required for Play-Morphia	
+	@Override public Object getId() {return scoreCardId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}	
 
 /*	#ScoreCard doc in Json
     ScoreCard:

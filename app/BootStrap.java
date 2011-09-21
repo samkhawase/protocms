@@ -16,15 +16,15 @@ public class BootStrap extends Job {
 
 	public void doJob() {
 		
-//		logger.info("clearing Fixtures.DB");
-//		Fixtures.deleteAllModels();
+ 		logger.info("clearing Fixtures.DB");
+		Fixtures.deleteAllModels();
 		
 		logger.info("before loading the .yml file");
 		Fixtures.loadModels("initial-data.yml");
 
 		Student student = Student.find().first();
 		logger.info("Student created: "+ student.objectId);
-		
+ 
 /*		---- ols code to create student manually ----
 		// Check if the database is empty
 		if (Student.count() == 0) {

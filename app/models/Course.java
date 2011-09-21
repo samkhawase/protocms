@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.bson.types.ObjectId;
 import com.google.code.morphia.annotations.Entity;
@@ -15,10 +16,9 @@ public class Course extends Model {
 	public String stream;
 	public String className;
 	public String courseHead;
-	public List<Subject> courseSubjects;
+	public List<Subject> courseSubjects = new ArrayList<Subject>();
 
-	//overridden methods for Play-Morphia
-	
+	//overridden methods for Play-Morphia	
 	@Override public Object getId() {return id;}
     @Override protected void setId_(Object id) {}
     protected static Object processId_(Object id) {return id;}	

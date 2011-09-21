@@ -16,8 +16,13 @@ public class Subject extends Model {
 	
 	@Required
 	public String subjectName;
+
+	// more fields, like syllabus, books recommended etc.
 	
-	// more fields, if reqd.
+	//overridden methods for Play-Morphia	
+	@Override public Object getId() {return subjectId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}	
 	
 /*	#Subject doc - completed
     Subject:
