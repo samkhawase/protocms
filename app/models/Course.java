@@ -10,6 +10,14 @@ import play.modules.morphia.Model;
 @Entity
 public class Course extends Model {
 
+	public Course(String stream, String className, String courseHead,
+			List<Subject> courseSubjects) {
+		super();
+		this.stream = stream;
+		this.className = className;
+		this.courseHead = courseHead;
+		this.courseSubjects = courseSubjects;
+	}
 	@Id
 	public ObjectId id;
 	

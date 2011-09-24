@@ -1,6 +1,21 @@
-{ "_id" : ObjectId("4e70f4a1b20b78c843618aa6"), 
-    "className" : "models.Course", 
-    "courseName" : "3rd Year", 
-    "courseHead" : "Pande", 
-    "courseSubjects" : [ "Maths", "Physics", "Chemistry" ] 
+ {
+     "_id" : ObjectId("4e7d42c62b5e10487de5a8ab"), 
+     "className" : "3rd Year", 
+     "stream" : "Computer", 
+     "courseHead" : "Pande", 
+     "courseSubjects" : [    
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a9"),   "subjectName" : "Chemistry" },  
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a5"),   "subjectName" : "Maths" },  
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a7"),   "subjectName" : "Physics" } 
+        ] 
+ }
+/* Lecture data */
+ 
+{ 
+    "_id" : ObjectId("4e7d4d172b5ea9f88af03d26"), 
+    "className" : "3rd Year", 
+    "teacherName" : "Pande", 
+    "subject" : { "_id" : ObjectId("4e7d4d172b5ea9f88af03d24"), "subjectName" : "English" }, 
+    "stream" : "Computer" 
 }
+ 

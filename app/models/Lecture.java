@@ -11,6 +11,15 @@ import play.modules.morphia.Model;
 @Entity
 public class Lecture extends Model {
 
+	public Lecture(String teacherName, Subject subject, String className,
+			String stream) {
+		super();
+		this.teacherName = teacherName;
+		this.subject = subject;
+		this.className = className;
+		this.stream = stream;
+	}
+
 	@Id
 	public ObjectId lectureId;
 	
@@ -22,6 +31,10 @@ public class Lecture extends Model {
 	
 	public List<Attendance> attendance;
 	
+	//overridden methods, required for Play-Morphia
+	@Override public Object getId() {return lectureId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}
 	
 /*	#Lecture Doc    
     Lecture:
