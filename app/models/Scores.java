@@ -21,6 +21,7 @@ public class Scores extends Model {
 	
 	public String stream;
 	public String className;
+	// Hashmap of Subject.subjectId and Int isn't that good idea. need to find another way  
 	public HashMap<ObjectId, Integer> scoresEarned; // ObjectId of the Subject.class
 	
 	//overridden methods, required for Play-Morphia	

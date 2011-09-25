@@ -26,6 +26,10 @@ public class TimeTable extends Model {
 	public String className;
 	public HashMap<String, Schedule> schedule;		// "Monday": {ObjId, startTime, EndTime}	
 		
+	//overridden methods, required for Play-Morphia
+	@Override public Object getId() {return timetableId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}
 	
 /*	#Timetable doc
     TimeTable:

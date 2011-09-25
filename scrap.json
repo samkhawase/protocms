@@ -28,4 +28,17 @@
             } 
         ] 
 }
- 
+
+/* Timetable */
+{ 
+    "_id" : ObjectId("4e7f9b172b5edc1ad01dd27b"), 
+    "className" : "Third Year", 
+    "stream" : "Computer", 
+    "schedule" : { 
+        "Monday" : { 
+            "lectureId" : ObjectId("4e7f9b172b5edc1ad01dd277"), 
+            "startTime" : "10:00:00 AM", 
+            "endTime" : "11:00:00 AM" 
+            } 
+        }
+}

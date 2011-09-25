@@ -4,6 +4,7 @@ import org.bson.types.ObjectId;
 import org.junit.*;
 
 import java.util.*;
+
 import play.test.*;
 import models.*;
 
@@ -47,12 +48,13 @@ public class BasicTest extends UnitTest {
 		listOfSubjects.add(physics);
 		
 		// create a Course object and persist
-		Course course = new Course("Computer", "Third Year", "Pande", listOfSubjects).save();
+		Course course = new Course("Computer", "Third Year", "Pande", listOfSubjects);
+		course.save();
 		
 		// tests
 		assertNotNull(course);
 		
-		Course anotherCourse = Course.find("byStream", "Computer").first();
+		Course anotherCourse = Course.find("byClassName","Third Year").first();
 		
 		assertNotNull(anotherCourse);
 		assertEquals("Third Year", anotherCourse.className);
@@ -96,9 +98,9 @@ public class BasicTest extends UnitTest {
 	// TODO: test timetable
 	@Test
 	public void testTimetable(){
-/*
+
 //		first create a Schedule
-		Lecture testLecture = Lecture.find().first();
+		Lecture testLecture = Lecture.find("byTeacherName", "Pande").first();
 		
 		Schedule dummySchedule = new Schedule();
 		dummySchedule.lectureId = testLecture.lectureId;
@@ -108,12 +110,40 @@ public class BasicTest extends UnitTest {
 		HashMap schedules = new HashMap();
 		schedules.put("Monday", dummySchedule);
 
-		TimeTable timeTable = new TimeTable("Computer", "Third Year", schedules).save();
+		TimeTable timeTable = new TimeTable("Computer", "Third Year", schedules);
+		timeTable.save();
 		
-*/		
+		
 	}
 	
 	// TODO: test scorecard
+	@Test
+	public void testScoreCard(){
+		// new score card
+		Scores scoreCard = new Scores();
+		// fill in the details of the card
+		scoreCard.studentId = null;
+		scoreCard.courseId = null;
+		scoreCard.stream = "Computer";
+		scoreCard.className = "Third Year";
+		// getand create some subjects
+		Subject physics = new Subject("Physics");
+		Subject maths = Subject.find("bySubjectName", "Maths").first();
+		// create a HashMap with subjects and the scores
+		HashMap<ObjectId, Integer> subjects = new HashMap();
+		subjects.put(physics.subjectId, new Integer(12));
+		subjects.put(maths.subjectId, new Integer(13));
+		//assign it to the score card object
+		
+		scoreCard.save();
+		
+//		scoreCard.scoresEarned = subjects;
+//		scoreCard.save();
+		
+//		String stream;                          
+//		String className;                       
+//		HashMap<ObjectId, Integer> scoresEarned;
+	}
 	
 	// TODO: test student
 	

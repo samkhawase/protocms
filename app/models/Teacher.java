@@ -28,6 +28,11 @@ public class Teacher extends Model {
 	@Embedded
 	public List<ObjectId> lectureDetails;
 	
+	//overridden methods, required for Play-Morphia
+	@Override public Object getId() {return teacherId;}
+    @Override protected void setId_(Object id) {}
+    protected static Object processId_(Object id) {return id;}
+	
 	
 /*	#Teacher doc
     Teacher:
