@@ -10,12 +10,22 @@
         ] 
  }
 /* Lecture data */
- 
+
 { 
-    "_id" : ObjectId("4e7d4d172b5ea9f88af03d26"), 
+    "_id" : ObjectId("4e7ea0ef2b5ece3c9a120f5a"),
     "className" : "3rd Year", 
     "teacherName" : "Pande", 
-    "subject" : { "_id" : ObjectId("4e7d4d172b5ea9f88af03d24"), "subjectName" : "English" }, 
-    "stream" : "Computer" 
+    "subject" : { "_id" : ObjectId("4e7ea0ef2b5ece3c9a120f58"), "subjectName" : "English" }, 
+    "stream" : "Computer", 
+    "attendance" : [     
+            {   
+                "lectureId" : ObjectId("4e7ea0ef2b5ece3c9a120f5b"),     
+                "lectureDate" : ISODate("2011-09-25T03:33:03.382Z"),    
+                "startTime" : "10:00:00",   
+                "endTime" : "11:00:00",     
+                "rollNumbersPresent" : [    "1",    "2",    "3",    "4", "5",   "9",    "10" ],     
+                "rollNumbersAbsent" : [     "6",    "7",    "8" ] 
+            } 
+        ] 
 }
  

@@ -12,6 +12,13 @@ import play.modules.morphia.Model;
 @Entity
 public class TimeTable extends Model {
 
+	public TimeTable(String stream, String className,
+			HashMap<String, Schedule> schedule) {
+		super();
+		this.stream = stream;
+		this.className = className;
+		this.schedule = schedule;
+	}
 	@Id
 	public ObjectId timetableId;
 	

@@ -47,7 +47,7 @@ public class BasicTest extends UnitTest {
 		listOfSubjects.add(physics);
 		
 		// create a Course object and persist
-		Course course = new Course("Computer", "3rd Year", "Pande", listOfSubjects).save();
+		Course course = new Course("Computer", "Third Year", "Pande", listOfSubjects).save();
 		
 		// tests
 		assertNotNull(course);
@@ -55,33 +55,63 @@ public class BasicTest extends UnitTest {
 		Course anotherCourse = Course.find("byStream", "Computer").first();
 		
 		assertNotNull(anotherCourse);
-		assertEquals("3rd Year", anotherCourse.className);
+		assertEquals("Third Year", anotherCourse.className);
 		assertEquals("Pande", anotherCourse.courseHead);
 		assertEquals("Chemistry",anotherCourse.courseSubjects.get(0).subjectName);
 		
 	}
 	
-	// test lecture
+	// test lecture - also testing attendance with it
 	@Test
 	public void testLecture(){
 		Subject english = new Subject("English").save();
 		
-		Lecture lecture = new Lecture("Pande", english, "3rd Year", "Computer").save();
+		Lecture lecture = new Lecture("Pande", english, "Third Year", "Computer").save();
 		
+		//	create an attendace doc and update lecture with it.	
+		Attendance dummyAttendance = new Attendance();
+		dummyAttendance.lectureId = new ObjectId();
+		dummyAttendance.lectureDate = new Date();
+		dummyAttendance.startTime = "10:00:00";
+		dummyAttendance.endTime = "11:00:00";
+		dummyAttendance.rollNumbersPresent = new String[] {"1","2","3","4","5","9","10"};
+		dummyAttendance.rollNumbersAbsent = new String [] {"6","7","8"};
+		lecture.attendance = new ArrayList(); 
+		lecture.attendance.add(dummyAttendance);		
+
+		// Update lecture and test
+		lecture.save();
+		// check if saved lecture is valid
+		Lecture newLecture = Lecture.find("byTeacherName", "Pande").first();
 		
-/*	TODO: create an attendace doc and update lecture with it.	
- * ObjectId one = new ObjectId("xyzf123");
-		ObjectId two = new ObjectId("xyzf1234");
-		List<ObjectId> dummyAttendance = new ArrayList();
-		dummyAttendance.add(one);
-		dummyAttendance.add(two);
+		assertNotNull(newLecture);
 		
-		lecture.attendance = dummyAttendance;
-*/		
+		assertEquals("Pande", newLecture.teacherName);
+		assertEquals("Third Year", newLecture.className);
+		assertEquals("Computer", newLecture.stream);
+		assertEquals(english, newLecture.subject);
 		
 	}
 	 
 	// TODO: test timetable
+	@Test
+	public void testTimetable(){
+/*
+//		first create a Schedule
+		Lecture testLecture = Lecture.find().first();
+		
+		Schedule dummySchedule = new Schedule();
+		dummySchedule.lectureId = testLecture.lectureId;
+		dummySchedule.startTime = "10:00:00 AM";
+		dummySchedule.endTime = "11:00:00 AM";
+		
+		HashMap schedules = new HashMap();
+		schedules.put("Monday", dummySchedule);
+
+		TimeTable timeTable = new TimeTable("Computer", "Third Year", schedules).save();
+		
+*/		
+	}
 	
 	// TODO: test scorecard
 	
