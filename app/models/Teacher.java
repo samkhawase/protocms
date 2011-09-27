@@ -26,7 +26,7 @@ public class Teacher extends Model {
 	public EmploymentDetails employmentDetails;
 	
 	@Embedded
-	public List<ObjectId> lectureDetails;
+	public List<ObjectId> lectureDetails;			// list of Lectures by ObjectId
 	
 	//overridden methods, required for Play-Morphia
 	@Override public Object getId() {return teacherId;}

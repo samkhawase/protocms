@@ -42,3 +42,88 @@
             } 
         }
 }
+/* Student data */
+{ 
+    "_id" : ObjectId("4e80b2d32b5ed543f9225b16"), 
+    "className" : "models.Student", 
+    "user" : { 
+            "userId" : "Sam", 
+            "password" : "secret", 
+            "emailId" : "sam@gmail.com", 
+            "isStudent" : true, 
+            "isEmployee" : false, 
+            "isAdmin" : false 
+            }, 
+    "personalDetails" : { 
+            "firstName" : "Sam", 
+            "lastName" : "Khawse", 
+            "addressLine1" : "5032 EP True", 
+            "city" : "West Des Moines", 
+            "phoneNumber" : 0 
+            }, 
+    "enrolmentDetails" : { 
+            "enrolmentNumber" : "1234", 
+            "rollNumber" : 34 
+            }, 
+    "scores" : [ 
+            { 
+                "_id" : ObjectId("4e80b2d32b5ed543f9225b14"), 
+                "stream" : "Computer" 
+            } 
+            ], 
+    "currentCourse" : ObjectId("4e80b2d32b5ed543f9225b0a") 
+}
+
+/* Teacher data */
+{ 
+    "_id" : ObjectId("4e80b6472b5e9f9e43dc7899"), 
+    "className" : "models.Teacher", 
+    "loginDetails" : { 
+            "userId" : "Pande", 
+            "password" : "secret", 
+            "emailId" : "pande@gmail.com", 
+            "isStudent" : false, 
+            "isEmployee" : true, 
+            "isAdmin" : false 
+            }, 
+    "personalDetails" : { 
+            "firstName" : "Makarand", 
+            "lastName" : "Pande", 
+            "addressLine1" : "Katraj- Ambegaon", 
+            "city" : "Pune", 
+            "phoneNumber" : 99988876 
+            }, 
+    "employmentDetails" : { 
+            "employeeNumber" : "123ZQ" 
+            }, 
+    "lectureDetails" : [ ObjectId("4e80b6472b5e9f9e43dc788f") ] 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

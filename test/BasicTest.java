@@ -3,6 +3,8 @@ import org.apache.log4j.Logger;
 import org.bson.types.ObjectId;
 import org.junit.*;
 
+import com.google.code.morphia.annotations.Embedded;
+
 import java.util.*;
 
 import play.test.*;
@@ -145,14 +147,11 @@ public class BasicTest extends UnitTest {
 //		HashMap<ObjectId, Integer> scoresEarned;
 	}
 	
-	// TODO: test student
-	
-	//TODO: test teacher
-	
+	// TODO: test student	
      @Test 
-     public void testStudentAndRelated(){
+     public void testStudent(){
 		
-/*    	// create a student here;
+    	// create a student here;
 		User user = new User("Sam", "secret", "sam@gmail.com");
 		user.isAdmin = false;
 		user.isEmployee = false;
@@ -171,29 +170,74 @@ public class BasicTest extends UnitTest {
 		ed.rollNumber = 34;
 
 		// Scores
-		Scores scores = new Scores();
-		scores.className = "3rd semester";
+		Scores currentScores = Scores.find().first();
+		List<Scores> listScores= new ArrayList();
+		listScores.add(currentScores);
 		
 		// Course
-		List<String> subjects = new ArrayList();
-		subjects.add("Maths");
-		subjects.add("Physics");
-		subjects.add("Chemistry");
+		Course currentCourse = Course.find().first();
 		
  		// now create a student
 		Student student = new Student();
-		student.currentCourse = course.id;  // currentCourse is now _id
+		student.currentCourse = currentCourse.id;  
 		student.user = user;
 		student.personalDetails = personalDetails;
 		student.enrolmentDetails = ed;
-		student.scores = scoresList;
+		student.scores = listScores;
 
-		logger.info("Student created with Name: "+ student.personalDetails.firstName);
-		//manually assign ObjectId to Student
-    	
-
+		play.Logger.info("Student created with Name: "+ student.personalDetails.firstName);
 		student.save();
-*/    	
+    	
     }
 
+ 	//TODO: test teacher
+     @Test
+     public void testTeacher(){
+    	 
+     	// create a teacher here;
+ 		User user = new User("Pande", "secret", "pande@gmail.com");
+ 		user.isEmployee = true;
+ 		user.isStudent = false;
+ 		
+		// personal details
+		PersonalDetails personalDetails = new PersonalDetails();
+		personalDetails.firstName = "Makarand";
+		personalDetails.lastName = "Pande";
+		personalDetails.addressLine1 = "Katraj- Ambegaon";
+		personalDetails.city = "Pune";
+		personalDetails.phoneNumber = 99988876;
+		
+		// employmentdetails
+		EmploymentDetails employmentDetails = new EmploymentDetails();
+		employmentDetails.employeeNumber = "123ZQ";
+ 		
+		// get lectures
+    	Lecture firstLecture = Lecture.find().first();
+    	List<ObjectId> lectureList = new ArrayList();
+    	lectureList.add(firstLecture.lectureId);
+    	
+    	// save the teacher to db
+    	Teacher pande = new Teacher();
+    	pande.loginDetails = user;
+    	pande.personalDetails = personalDetails;
+    	pande.employmentDetails = employmentDetails;
+    	pande.lectureDetails = lectureList;
+    	
+    	pande.save();
+    	play.Logger.info("Teacher created: ", pande.personalDetails.firstName);
+    	
+    	
+/*    		@Embedded
+    		public User loginDetails;
+    		
+    		@Embedded
+    		public PersonalDetails personalDetails;
+    		
+    		@Embedded
+    		public EmploymentDetails employmentDetails;
+    		
+    		@Embedded
+    		public List<ObjectId> lectureDetails;
+*/
+     }
 }
