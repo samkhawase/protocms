@@ -1,0 +1,53 @@
+## Test data
+#
+#Subject(maths): 
+#    subjectName: 'Maths'
+#    subjectId: 'P12345'            
+#Subject(chemistry): 
+#    subjectName: 'Chemistry'
+#    subjectId: 'C12345'            
+#Subject(english): 
+#    subjectName: 'English'
+#    subjectId: 'E12345'           
+#Subject(calculus): 
+#    subjectName: 'Calculus'
+#    subjectId: 'M12222'
+#      
+#Course(thirdYear):
+#    courseName:     3rd Year
+#    courseHead:     Pande"
+#
+##ScoreCard doc - Completed
+#    Scores(firstYear):
+#        stream:         'Computer Science'
+#        className :     '3rd year'
+#        Subjects:
+#            - Maths :       '15'
+#            - Physics:      '14'
+#            - Chemistry:    '13'            
+#            - Calculus:     '13'
+#           
+#Student(balooBear):
+#    user:
+#        userId:         baloo.bear
+#        password:       secret
+#        emailId:        baloo@gmail.com
+#        isStudent:      true
+#        isEmployee:     false
+#        isAdmin:        false
+#        createdOn:      2001-11-23 15:01:42 -5
+#        lastUpdate:     2001-11-23 15:01:42 -5
+#
+#    personalDetails:
+#        firstName:      Baloo   
+#        middleName:     Big
+#        lastName:       Bear 
+#        addressLine1:   Punter lane 
+#        addressLine2:   Hawai gully
+#        city:           Cape Suzette        
+#        state:          IA       
+#        zipCode:        50265     
+#        
+#    enrolmentDetails:
+#        enrolmentNumber:  12345
+#        rollNumber:       34

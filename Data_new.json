@@ -1,0 +1,175 @@
+{
+    "user":{
+        "userName":"Sam.Khawse",
+        "email":"sam@gmail.com",
+        "isStudent":"true",
+        "isAdmim":"false",
+        "isEmployee":"false",
+        "saletedPass":"0xsalted",
+        "salt":"abcd",
+        "recoveryString":"Akola",
+        "createdOn":"08302011120000",
+        "lastUpdate":"08302011120000"
+    }
+},
+{
+    "student":{
+        "loginDetails":{
+            "userName":"Sam.Khawse",
+            "email":"sam@gmail.com",
+            "isStudent":"true",
+            "isAdmim":"false",
+            "isEmployee":"false",
+            "saletedPass":"0xsalted",
+            "salt":"abcd",
+            "recoveryString":"Akola",
+            "createdOn":"08302011120000",
+            "lastUpdate":"08302011120000"
+        },
+        "personalDetails":{
+            "name":{
+                "firstName":"Sam",
+                "middleName":"Shridhar",
+                "lastName":"Khawse"
+            },
+            "address":{
+                "line1":"3600",
+                "line2":"Army Post Rd.",
+                "city":"Des Moines",
+                "state":"IA",
+                "zip":"50321"
+            },
+            "phone":"5152109636",
+            "dateOfBirth":"12/24/1982",
+            "sex":"male",
+            "bloodGroup":"A+"
+        },
+        "enrolmentDetails":{
+            "enrolmentNumber":"12345",
+            "rollNo":"31",
+            
+        },
+   "course":{
+        "courseName":"3rd Semester",
+        "courseSubjects":[
+            "Engg. Maths":{
+                "subjectName":"Engg. Maths",
+                "teacher":"McPande"
+            },
+            "Physics II":{
+                "subjectName":"Physics II",
+                "teacher":"Gadekar"
+            },
+            "Chemistry II":{
+                "subjectName":"Chemistry II",
+                "teacher":"Deshmukh"
+            },
+            "English II":{
+                "subjectName":"English II",
+                "teacher":"Deshmukh"
+            }
+        ],
+        "courseHead":"Anna Hazare"
+    }
+    "scores": { 
+	"subject1" : [25,25,23,24], "subject2" : [25,25,23,24], "subject3" : [25,25,23,24], "subject4" : [25,25,23,24], "subject5" : [25,25,23,24]
+    }
+    }
+},
+{
+    "employee":{
+        "loginDetails":{
+            "userName":"Anna.Hazare",
+            "email":"anna@gmail.com",
+            "isEmployee":"true",
+            "saletedPass":"0xsalted",
+            "salt":"abcd",
+            "recoveryString":"Ralegaon Siddhi",
+            "createdOn":"08302011120000",
+            "lastUpdate":"08302011120000"
+        }
+        "personalDetails":{
+            "name":{
+                "firstName":"Anna",
+                "middleName":"Baburao",
+                "lastName":"Hazare"
+            },
+            "address":{
+                "line1":"Village Temple",
+                "line2":"Main Rd.",
+                "city":"Ralegaon Siddhi",
+                "state":"MS",
+                "zip":"421012"
+            },
+            "phone":"9998887766",
+            "dateOfBirth":"01/01/1952",
+            "sex":"male",
+            "bloodGroup":"A+"
+        }
+        "employmentDetails":{
+            "dateOfJoining":"08302011",
+            "experience":"12 Years",
+            "education":"M.Sc. Maths",
+            "designation":"Sr. lecturer"
+        }
+        "teachingDetails":{
+            "classes":[
+                "3rd Sem",
+                "4th Sem",
+                "8th Sem"
+            ],
+            "courses":[
+                "Analytical Maths",
+                "Astro Physics",
+                "Integral Calculus"
+            ]
+            ""
+        }
+    }
+},
+{
+    "subject":{
+        "subjectName":"Engg. Maths",
+        "teacher":"McPande"
+    }
+},
+{
+    "course":{
+        "courseName":"3rd Semester",
+        "courseSubjects":[
+            "Engg. Maths":{
+                "subjectName":"Engg. Maths",
+                "teacher":"McPande"
+            },
+            "Physics II":{
+                "subjectName":"Physics II",
+                "teacher":"Gadekar"
+            },
+            "Chemistry II":{
+                "subjectName":"Chemistry II",
+                "teacher":"Deshmukh"
+            },
+            "English II":{
+                "subjectName":"English II",
+                "teacher":"Deshmukh"
+            }
+        ],
+        "courseHead":"Anna Hazare"
+    }
+},
+{
+    "Lecture":{
+        "batchName":"Engg. Maths",
+        "subject":{
+            "subjectName":"Engg. Maths",
+            "teacher":"McPande"
+        },
+        "schedule":[
+            "Monday":"11:00 AM",
+            "Wednesday"::"11:00 AM",
+            "Friday":"10:00AM"
+        ],
+        
+    }
+}
+/*Course:e.g.3rdSem.MathsBatchorSectionorPeriod:e.g.Engg.MathsbyProf.Deshpandeat10:00AMYearorTerm:3rdyearElectronicsSubject:Engg.mathsTimetable:1stweekofSept.*/

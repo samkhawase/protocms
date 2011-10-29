@@ -1,0 +1,132 @@
+Entities:
+# Student document  - Completed
+    Student:
+        studentId:              _id
+        loginDetails:           _Embedded
+        personalDetails:        _Embedded
+        enrollmentDetails:      _Embedded
+        currentCourse:          _linkToCourseDoc        
+        scoreCard:              _linkToCurrentScoreCard
+        previousCourses: 
+                - _linkToCourseDoc
+                - _linkToCourseDoc
+
+#ScoreCard doc - Completed
+    ScoreCard:
+        scoreCardId:    _id
+        studentId:      _linkToStudentDoc
+        courseId:       _linkToCourseDoc        
+        stream:         'Computer Science'
+        className :     '3rd year'
+        Subjects:
+            - Maths :       '15'
+            - Physics:      '14'
+            - Chemistry:    '13'            
+            - Calculus:     '13'
+
+#Subject doc - completed
+    Subject:
+        subjectId:      'M12345'
+        subjectName:    'Maths'
+
+#Course doc - completed
+    Course: 
+        courseId:       _id
+        stream:         'Computer Science'
+        className :     '3rd year'
+        courseHead :    'Pande'
+        courseSubjects:
+            - subjectOne : 
+                    subjectName: 'Maths'
+                    subjectId: 'M12345'
+            - subjectTwo: 
+                    subjectName: 'Physics'
+                    subjectId: 'P12345'            
+            - subjectThree: 
+                    subjectName: 'Chemistry'
+                    subjectId: 'C12345'            
+            - subjectFour: 
+                    subjectName: 'English'
+                    subjectId: 'E12345'           
+            - subjectFive: 
+                    subjectName: 'Calculus'
+                    subjectId: 'M12222'
+
+#Teacher doc - completed
+    Teacher:
+        teacherId:              _id
+        loginDetails:           _Embedded
+        personalDetails:        _Embedded
+        enrollmentDetails:      _Embedded
+        teachingDetails:        
+            lectures:
+                - _linkToLecture1
+                - _linkToLecture2
+                - _linkToLecture3
+
+#Timetable doc
+    TimeTable:
+        stream: 'Computer Science'
+        class: '3rd year'
+        Monday :
+            lecture1: 
+              lectureId:    _linkToLectureDoc
+              startTime:    '10:00 AM'
+              endTime:      '11:00 AM'
+            lecture2:
+              lectureId:    _linkToLectureDoc
+              startTime:    '11:00 AM'
+              endTime:      '12:00 PM'
+            lecture3:
+              lectureId:    _linkToLectureDoc
+              startTime:    '01:00 PM'
+              endTime:      '02:00 PM'
+            lecture4:
+              lectureId:    _linkToLectureDoc
+              startTime:    '02:00 PM'
+              endTime:      '03:00 PM'            
+            lecture5:
+              lectureId:    _linkToLectureDoc
+              startTime:    '03:00 PM'
+              endTime:      '04:00 PM'                          
+        Tuesday: 
+            # ...
+        Wednesday: 
+            # ...
+        Thursday: 
+            # ...
+        Friday: 
+            # ...
+
+#Lecture Doc    
+    Lecture:
+        lectureId:          _id
+        teacherId:          _linkToTeacherDoc   # teacher can be fetched by using the document _id
+        teacherName:        'Pande'             # redundant info       
+        subject:            'Maths'
+        class:              '3rd Year'
+        division:           'Computers'
+    # _Embedded Attendance Doc; List
+        Attendance:
+            -
+              attendanceID:       _id
+              lectureId:          _linkToLectureDoc
+              date:               '2001-11-23'
+              startTime:          '3:00 PM'
+              endTime:            '4:00 PM'
+              rollNumbersPresent: [1,2,3,4,5,6]
+              rollNumbersAbsent:  [7,8,9,10]                
+            -
+              attendanceID:       _id
+              lectureId:          _linkToLectureDoc
+              date:               '2001-11-23'
+              startTime:          '3:00 PM'
+              endTime:            '4:00 PM'
+              rollNumbersPresent: [1,2,3,4,5,6]
+              rollNumbersAbsent:  [7,8,9,10]                
+        
+# Other docs;next version     
+    Non teaching staff:
+    # TBD
+    Admins:
+    # TBD

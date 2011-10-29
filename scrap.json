@@ -1,0 +1,129 @@
+ {
+     "_id" : ObjectId("4e7d42c62b5e10487de5a8ab"), 
+     "className" : "3rd Year", 
+     "stream" : "Computer", 
+     "courseHead" : "Pande", 
+     "courseSubjects" : [    
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a9"),   "subjectName" : "Chemistry" },  
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a5"),   "subjectName" : "Maths" },  
+         {   "_id" : ObjectId("4e7d42c62b5e10487de5a8a7"),   "subjectName" : "Physics" } 
+        ] 
+ }
+/* Lecture data */
+
+{ 
+    "_id" : ObjectId("4e7ea0ef2b5ece3c9a120f5a"),
+    "className" : "3rd Year", 
+    "teacherName" : "Pande", 
+    "subject" : { "_id" : ObjectId("4e7ea0ef2b5ece3c9a120f58"), "subjectName" : "English" }, 
+    "stream" : "Computer", 
+    "attendance" : [     
+            {   
+                "lectureId" : ObjectId("4e7ea0ef2b5ece3c9a120f5b"),     
+                "lectureDate" : ISODate("2011-09-25T03:33:03.382Z"),    
+                "startTime" : "10:00:00",   
+                "endTime" : "11:00:00",     
+                "rollNumbersPresent" : [    "1",    "2",    "3",    "4", "5",   "9",    "10" ],     
+                "rollNumbersAbsent" : [     "6",    "7",    "8" ] 
+            } 
+        ] 
+}
+
+/* Timetable */
+{ 
+    "_id" : ObjectId("4e7f9b172b5edc1ad01dd27b"), 
+    "className" : "Third Year", 
+    "stream" : "Computer", 
+    "schedule" : { 
+        "Monday" : { 
+            "lectureId" : ObjectId("4e7f9b172b5edc1ad01dd277"), 
+            "startTime" : "10:00:00 AM", 
+            "endTime" : "11:00:00 AM" 
+            } 
+        }
+}
+/* Student data */
+{ 
+    "_id" : ObjectId("4e80b2d32b5ed543f9225b16"), 
+    "className" : "models.Student", 
+    "user" : { 
+            "userId" : "Sam", 
+            "password" : "secret", 
+            "emailId" : "sam@gmail.com", 
+            "isStudent" : true, 
+            "isEmployee" : false, 
+            "isAdmin" : false 
+            }, 
+    "personalDetails" : { 
+            "firstName" : "Sam", 
+            "lastName" : "Khawse", 
+            "addressLine1" : "5032 EP True", 
+            "city" : "West Des Moines", 
+            "phoneNumber" : 0 
+            }, 
+    "enrolmentDetails" : { 
+            "enrolmentNumber" : "1234", 
+            "rollNumber" : 34 
+            }, 
+    "scores" : [ 
+            { 
+                "_id" : ObjectId("4e80b2d32b5ed543f9225b14"), 
+                "stream" : "Computer" 
+            } 
+            ], 
+    "currentCourse" : ObjectId("4e80b2d32b5ed543f9225b0a") 
+}
+
+/* Teacher data */
+{ 
+    "_id" : ObjectId("4e80b6472b5e9f9e43dc7899"), 
+    "className" : "models.Teacher", 
+    "loginDetails" : { 
+            "userId" : "Pande", 
+            "password" : "secret", 
+            "emailId" : "pande@gmail.com", 
+            "isStudent" : false, 
+            "isEmployee" : true, 
+            "isAdmin" : false 
+            }, 
+    "personalDetails" : { 
+            "firstName" : "Makarand", 
+            "lastName" : "Pande", 
+            "addressLine1" : "Katraj- Ambegaon", 
+            "city" : "Pune", 
+            "phoneNumber" : 99988876 
+            }, 
+    "employmentDetails" : { 
+            "employeeNumber" : "123ZQ" 
+            }, 
+    "lectureDetails" : [ ObjectId("4e80b6472b5e9f9e43dc788f") ] 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
