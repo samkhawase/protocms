@@ -8,7 +8,7 @@ public class Janitor extends UnitTest {
 
 	@Test
 	public void cleanUp(){
-		play.Logger.info("Inside @Before method()");
+		play.Logger.info("Starting Janitor Cleanup operations");
 		Fixtures.deleteAllModels();
 
 	}
