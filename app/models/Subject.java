@@ -10,26 +10,17 @@ import play.modules.morphia.Model;
 
 @Entity
 public class Subject extends Model {
-	
-	@Id
-	public ObjectId subjectId;
-	
+		
 	@Required
 	public String subjectName;
-	
 
 	// TODO: more fields, like syllabus, books recommended etc.
 	
 	public Subject(String subjectName) {
-		super();
+		//super();
 		this.subjectName = subjectName;
 	}
-	
-	//overridden methods for Play-Morphia	
-	@Override public Object getId() {return subjectId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}	
-	
+		
 /*	#Subject doc - completed
     Subject:
         subjectId:      'M12345'

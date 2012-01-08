@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.bson.types.ObjectId;
 import com.google.code.morphia.annotations.Embedded;
@@ -11,31 +12,24 @@ import play.modules.morphia.Model;
 @Entity
 public class Lecture extends Model {
 
-	public Lecture(String teacherName, Subject subject, String className,
-			String stream) {
-		super();
-		this.teacherName = teacherName;
-		this.subject = subject;
-		this.className = className;
-		this.stream = stream;
-	}
-
-	@Id
-	public ObjectId lectureId;
-	
 	public ObjectId teacherId;
 	public String teacherName;
 	public Subject subject;
 	public String className;
 	public String stream;
 	
-	public List<Attendance> attendance;
+	public ArrayList<Attendance> attendance;		// Static?
 	
-	//overridden methods, required for Play-Morphia
-	@Override public Object getId() {return lectureId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}
-	
+	public Lecture(ObjectId teacherId, String teacherName, Subject subject, String className,
+			String stream) {
+		
+		this.teacherId = teacherId;
+		this.teacherName = teacherName;
+		this.subject = subject;
+		this.className = className;
+		this.stream = stream;
+	}
+
 /*	#Lecture Doc    
     Lecture:
         lectureId:          _id

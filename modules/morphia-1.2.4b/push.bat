@@ -1,0 +1,1 @@
+bash -c 'git push --tags'

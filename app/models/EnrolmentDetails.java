@@ -7,6 +7,6 @@ import play.modules.morphia.Model;
 public class EnrolmentDetails {
 
 	public String enrolmentNumber;
-	public int rollNumber; 			// can be String also
+	public String rollNumber; 			// can be String also
 	// we need the college/institution details here
 }

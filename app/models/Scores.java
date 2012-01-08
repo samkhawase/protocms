@@ -13,22 +13,14 @@ import com.google.code.morphia.annotations.Id;
 @Entity
 public class Scores extends Model {
 
-	@Id
-	public ObjectId scoreCardId;
-	
 	public ObjectId studentId;
 	public ObjectId courseId;
-	
 	public String stream;
 	public String className;
-	// Hashmap of Subject.subjectId and Int isn't that good idea. need to find another way  
+	
+	// Hashmap of Subject.Id and Int isn't that good idea. need to find another way  
 	public HashMap<ObjectId, Integer> scoresEarned; // ObjectId of the Subject.class
 	
-	//overridden methods, required for Play-Morphia	
-	@Override public Object getId() {return scoreCardId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}	
-
 /*	#ScoreCard doc in Json
     ScoreCard:
         scoreCardId:    _id

@@ -12,6 +12,10 @@ import play.modules.morphia.Model;
 @Entity
 public class TimeTable extends Model {
 
+	public String stream;
+	public String className;
+	public HashMap<String, Schedule> schedule;		// "Monday": {ObjId, startTime, EndTime}	
+	
 	public TimeTable(String stream, String className,
 			HashMap<String, Schedule> schedule) {
 		super();
@@ -19,18 +23,8 @@ public class TimeTable extends Model {
 		this.className = className;
 		this.schedule = schedule;
 	}
-	@Id
-	public ObjectId timetableId;
 	
-	public String stream;
-	public String className;
-	public HashMap<String, Schedule> schedule;		// "Monday": {ObjId, startTime, EndTime}	
-		
-	//overridden methods, required for Play-Morphia
-	@Override public Object getId() {return timetableId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}
-	
+			
 /*	#Timetable doc
     TimeTable:
         stream: 'Computer Science'

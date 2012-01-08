@@ -7,10 +7,7 @@ import play.modules.morphia.Model;
 
 @Embedded
 public class PersonalDetails {
-	
-//	// default bson doc. id
-//	public ObjectId objectId;
-	
+		
 	// other personal details
 	public String firstName;
 	public String middleName;

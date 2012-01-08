@@ -13,8 +13,8 @@ import play.modules.morphia.Model;
 @Entity
 public class Teacher extends Model {
 
-	@Id
-	public ObjectId teacherId;
+//	@Id
+//	public ObjectId teacherId;
 	
 	@Embedded
 	public User loginDetails;
@@ -28,10 +28,10 @@ public class Teacher extends Model {
 	@Embedded
 	public List<ObjectId> lectureDetails;			// list of Lectures by ObjectId
 	
-	//overridden methods, required for Play-Morphia
-	@Override public Object getId() {return teacherId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}
+//	//overridden methods, required for Play-Morphia
+//	@Override public Object getId() {return teacherId;}
+//    @Override protected void setId_(Object id) {}
+//    protected static Object processId_(Object id) {return id;}
 	
 	
 /*	#Teacher doc

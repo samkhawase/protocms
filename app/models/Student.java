@@ -18,9 +18,6 @@ import play.modules.morphia.Model;
 @Entity
 public class Student extends Model {
 	
-	@Id
-	public ObjectId objectId;
-	
 	// User details, user details are fetched as Student.user.userId; 
 	@Required
 	@Embedded
@@ -39,13 +36,6 @@ public class Student extends Model {
 	
 	// Course details - Reference, not embedded - Nope. just _id
 	public ObjectId currentCourse;
-	
-//	public ObjectId [] previousCourses;
-	
-	//overridden methods, required for Play-Morphia
-	@Override public Object getId() {return objectId;}
-    @Override protected void setId_(Object id) {}
-    protected static Object processId_(Object id) {return id;}
 	
 
 }

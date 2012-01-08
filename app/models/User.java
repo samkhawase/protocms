@@ -12,9 +12,7 @@ import play.data.validation.Required;
 import play.modules.morphia.Model;
 
 @Embedded
-public class User{
-	
-//	public ObjectId objectId;
+public class User{	
 	
 	@Required
 	public String userId;
