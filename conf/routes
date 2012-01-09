@@ -5,7 +5,7 @@
 # Home page
 GET     /                                       Application.index
 
-# the bootstrap page
+# the bootstrap page -- only used for test -- remove
 #GET    /bootstrap								Application.bootstrap
 
 # Ignore favicon requests
