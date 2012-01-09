@@ -15,6 +15,8 @@ public class BootStrap extends Job {
 
 	public void doJob() {
 		
+		Fixtures.deleteAllModels();
+		
 		// create the basic information
 		LoadData.createBasic();
 		// student

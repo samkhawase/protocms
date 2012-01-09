@@ -115,7 +115,7 @@ public class LoadData {
 
 		// enrollment Details
 		EnrolmentDetails ed = new EnrolmentDetails();
-		ed.enrolmentNumber = "1234";
+		ed.enrolmentNumber = "GCOE01234";
 		ed.rollNumber = "34";
 
 		// Scores

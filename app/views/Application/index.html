@@ -1,6 +1,25 @@
-#{extends 'main.html' /}
+#{extends 'bootstrap.html' /}
 #{set title:'Home' /}
 
 <p>
-${student.personalDetails.firstName}
+ 
+<table>
+	<caption>Fetched the following information from Database:</caption>
+	<thead>
+		<tbody>
+		<tr>
+			<th> Student Name </th>
+			<th> Enrolment Number </th>
+			<th>Email ID</th>
+			<th>Course Head</th>
+		</tr>
+		<tr>
+			<td>${student.personalDetails.firstName} , ${student.personalDetails.lastName} </td>
+			<td>${student.enrolmentDetails.enrolmentNumber}</td>
+			<td>${student.user.emailId}</td>
+			<td>${currentCourse.courseHead}</td> 
+		</tr>
+		</tbody>
+</table>
+
 </p>

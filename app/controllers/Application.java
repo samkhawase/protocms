@@ -12,8 +12,13 @@ public class Application extends Controller {
     public static void index() {
     	
     	Student student = Student.find().first();
+    	Course currentCourse = Course.findById(student.currentCourse);
+    	render(student,currentCourse);
+    }
+    
+    public static void bootstrap(){
     	
-    	render(student);
+    	render();
     }
 
 }

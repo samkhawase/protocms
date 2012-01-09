@@ -5,6 +5,9 @@
 # Home page
 GET     /                                       Application.index
 
+# the bootstrap page
+#GET    /bootstrap								Application.bootstrap
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
