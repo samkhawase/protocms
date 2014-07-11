@@ -1,0 +1,8 @@
+ProtoCMS is the prototype of Content Management System aimed at University and Colleges. 
+Requirements V1.0.txt file outlined some basic functionalities needed in the app.
+
+This prototype was developed for Govt. College of Engineering Amravati, but due to some issues, it ran into the ground.
+
+This project uses Play framework and MongoDB.
+
+ 
